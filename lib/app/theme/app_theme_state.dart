@@ -14,7 +14,9 @@ class AppThemeNotifier extends StateNotifier<ThemeData> {
     this._getAppThemeUseCase,
     this._setAppThemeUseCase,
     this._appThemeMapper,
-  ) : super(AppTheme.lightThemeData);
+  ) : super(AppTheme.lightThemeData) {
+	  getAppTheme();
+  }
 
   final GetAppThemeUseCase _getAppThemeUseCase;
   final SetAppThemeUseCase _setAppThemeUseCase;

@@ -18,7 +18,6 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: _buildBody2(),
     );
   }
@@ -80,7 +79,7 @@ class SplashPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Icon(
-          Icons.location_searching,
+          Icons.my_location_rounded,
           size: 100,
         ),
         SizedBox(height: 32),
@@ -90,13 +89,13 @@ class SplashPage extends StatelessWidget {
         ),
         SizedBox(height: 32),
         SubTitleTextWidget(
-          value: 'You are at: ${userLocation.cityName}',
+          value: 'You are in: ${userLocation.cityName}',
           isCenter: true,
         ),
         SizedBox(height: 32),
         MaterialButton(
           color: Colors.red,
-          onPressed: () => context.router.push(HomeRoute()),
+          onPressed: () => context.router.replace(HomeRoute()),
           child: Text('Get Started!'),
         ),
         SizedBox(height: 32),
