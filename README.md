@@ -15,6 +15,20 @@ Techniques:
 
 There many other ways to distribute the app but these are the basic/general techniques.
 
+## Feature Based Modularization
+In this technique one distribute the app in different feature modules where each module is self sufficient and independent. This give the power of plug and play but at the same time the inter dependent features suffers since it increases the complexity of sharing in between features. 
+![feature_modularization](https://user-images.githubusercontent.com/16761273/126306302-8c5fa884-26b8-406e-8dd1-c232bf8a3a7d.png)
+
+## Layer Based Modularization
+In this technique one distribute the app in layers of functionality. This makes the app testable and provide true meaning of SOLID principles. But this type is not very helpfun in complex/feature dependent app.
+![layer_modularization](https://user-images.githubusercontent.com/16761273/126306371-0dd18f27-2278-4552-97ad-c91026d21593.png)
+
+
+## Hybrid Based Modularization
+In this technique one combines both of the above techniques. Certainly this increases the app complexity but at the same time provide lot of freedom and interchangability.
+![hybrid_modularization](https://user-images.githubusercontent.com/16761273/126306391-832c97f0-a793-4a3d-8487-0123f95f0e41.png)
+
+
 Pro: 
 1. Seperation of Concern
 2. Maintainablilty
@@ -25,7 +39,7 @@ Pro:
 Con: 
 1. Slower development
 2. Could be an over kill if feature is small
-3. Increases code cmplexity in the 
+3. Increases code cmplexity
 
 ## Structure Overview
 The app is very basic with networking and few main features: 
@@ -36,6 +50,9 @@ The app is very basic with networking and few main features:
 5. Setting (Theme, Language etc)
 6. Add location (Pending)
 7. Add Feedback (Pending)
+
+![air_quality](https://user-images.githubusercontent.com/16761273/126311998-23e4bcbe-ca0b-43be-ba34-6e3d06b1e566.png)
+
 
 Modules in the App:
 
@@ -75,4 +92,16 @@ In flutter environment the following could be challenges:
 1. Navigation between feature modules
 2. DI for modules
 3. Module inter dependencies
+
+## Features
+1. Clean Arch
+2. DI
+3. Riverpod State Management
+4. Analytics (Pending)
+5. Firebase Connection (Pending)
+6. Localization (Pending)
+7. Theme
+8. Add Location (Pending)
+9. Flavours (Pending)
+10. Build Type (Pending)
 
