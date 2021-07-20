@@ -1,0 +1,47 @@
+name: air_quality
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #Riverpod
+  flutter_riverpod: ^0.14.0+3
+  #Rx Dart
+  rxdart: ^0.27.1
+  #Routing
+  auto_route: ^2.2.0
+  cupertino_icons: ^1.0.3
+  derry: ^1.4.1
+  #App Modules
+  domain:
+    path: layer/domain
+  data:
+    path: layer/data
+  common:
+    path: utility/common
+  analytics:
+    path: utility/analytics
+  component:
+    path: utility/component
+  history:
+    path: feature/history
+  forecast:
+    path: feature/forecast
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  auto_route_generator: ^2.1.0
+  build_runner: ^2.0.6
+
+flutter:
+  uses-material-design: true
+
+scripts: derry.yaml
