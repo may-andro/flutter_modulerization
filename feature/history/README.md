@@ -1,14 +1,13 @@
 # history
 
-A new Flutter package project.
+This is a feature to get AQI history for last 7 days for a location.
 
-## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Dependencies
+This module depends on core layers (Domain and Data) and utility layer (Common, Analytics and Component).
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+This is mostly presentation layer where all the supporting parts are provided in oreder to work well.
+
+## TODO
+1. Polish the UI of this feature
+2. Added custom date picker for range.

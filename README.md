@@ -6,7 +6,7 @@ A small Flutter project to demonstrate the concept of Modularization in project.
 
 Modular programming is a software design technique to separate functionality into independent, interchangeable module, so that each contains everything necessary to execute a specific functionality.
 
-Android equivalent concept: 
+Android equivalent concept: https://www.youtube.com/watch?v=PZBg5DIzNww
 
 Techniques: 
 1. Feature Based 
@@ -86,6 +86,12 @@ These modules are feature based which mostly has presentation layers.
 ### main Module
 This module has basic setup for all the app which could be theme, global state, routes etc.
 
+## To create Module in Flutter 
+mkdir layer
+
+cd layer
+
+flutter create --template=package domain
 
 ## Challenges 
 In flutter environment the following could be challenges:
