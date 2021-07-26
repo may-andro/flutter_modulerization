@@ -9,3 +9,9 @@ extension DateTimeExtension on DateTime {
     return dateFormat.format(this);
   }
 }
+
+extension DateTimeStringExtension on String {
+	DateTime? getFormattedDate() {
+		return DateTime.tryParse(this);
+	}
+}

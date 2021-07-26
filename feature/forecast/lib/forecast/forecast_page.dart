@@ -5,8 +5,8 @@ import 'package:domain/entity/pollutant.dart';
 import 'package:domain/utils/result_state/result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:forecast/forecast/model/forecast_ui_model.dart';
-import 'package:forecast/forecast/widget/ForecastDateTabWidget.dart';
+import 'package:forecast/forecast/model/forecast_list_item.dart';
+import 'package:forecast/forecast/widget/forecast_calender_list_widget.dart';
 
 import 'provider/forecast_page_provider.dart';
 
@@ -44,8 +44,8 @@ class ForecastPage extends StatelessWidget {
     if (data is Success) {
       return Consumer(builder: (context, watch, child) {
         final pollutantList = (data as Success<List<Pollutant>>).data;
-        AppLogger.logWarning('_buildUIState before pollutantList; ${pollutantList.length}', logger: logger);
-        final uiList = watch(provideAirPollutantMap(pollutantList));
+        AppLogger.logDebug('_buildUIState before pollutantList; ${pollutantList.length}', logger: logger);
+        final uiList = watch(provideForecastItemMap(pollutantList));
         return uiList.when(
           data: (data) => _buildSuccessState(data, context),
           loading: () => _buildLoadingState(),
@@ -74,9 +74,11 @@ class ForecastPage extends StatelessWidget {
   }
 
   _buildSuccessState(
-    Map<String, List<ForecastUiModel>> pollutantMap,
+    Map<DateTime, List<ForecastItem>> pollutantMap,
     BuildContext context,
   ) {
-    return ForecastDateTabWidget(pollutantMap: pollutantMap);
+    return ForecastCalenderListWidget(
+      forecastMap: pollutantMap,
+    );
   }
 }
