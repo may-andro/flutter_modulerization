@@ -2,6 +2,8 @@
 
 A small Flutter project to demonstrate the concept of Modularization in project.
 
+Please refer to [Pokemon Quiz App}](https://github.com/may-andro/flutter_pokemon_quiz) for Newer Version of Modulariation.
+
 ## Concept
 
 Modular programming is a software design technique to separate functionality into independent, interchangeable module, so that each contains everything necessary to execute a specific functionality.
